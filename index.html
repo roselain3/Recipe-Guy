@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="riteshisawesome.js"></script>
+    <title>Receipe Guy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 20px 0;
+        }
+        .quiz-container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            display: block;
+            border: 2px solid #ff6600;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .question {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .options button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .options button:hover {
+            background-color: #e65c00;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Receipe Guy</h1>
+    </header>
+    <div class="quiz-container">
+        <div class="question">Breakfast, Lunch, or Dinner?</div>
+        <div class="options">
+            <button onclick="BLD('Breakfast', this)">Breakfast</button>
+            <button onclick="BLD('Lunch', this)">Lunch</button>
+            <button onclick="BLD('Dinner', this)">Dinner</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="quiz-container">
+        <div class="question">Salty, Savory, or Sweet?</div>
+        <div class="options">
+            <button onclick="SSS('Salty', this)">Salty</button>
+            <button onclick="SSS('Sweet', this)">Sweet</button>
+            <button onclick="SSS('Savory', this)">Savory</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="quiz-container">
+        <div class="question">What genre of food?</div>
+        <div class="options">
+            <button onclick="Genre('Asian', this)">Asian</button>
+            <button onclick="Genre('Americans', this)">Americans</button>
+            <button onclick="Genre('Spanish', this)">Spanish</button>
+            <button onclick="Genre('Mediterranian', this)">Mediterranian</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+</div>
+<div class="quiz-container">
+    <div class="question">Any allergies?</div>
+    <input type="text" id="Allergy" placeholder="Enter your allergies" style="width: 80%; padding: 10px; margin: 10px 0; border: 2px solid #ff6600; border-radius: 5px; font-size: 1em;">
+    <button onclick="Allergy()" style="padding: 10px 20px; background-color: #ff6600; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1em;">Submit Allergy</button>
+    </div>
+    <div class="result" id="result"></div>
+</div>
+<div class="quiz-container">
+    <div class="question">Do you have any dietary restrictions?</div>
+    <div class="options">
+        <button onclick="Restrictions('None', this)">None</button>
+        <button onclick="Restrictions('Vegetarian', this)">Vegetarian</button>
+        <button onclick="Restrictions('Gluten-free', this)">Gluten-Free</button>
+        <button onclick="Restrictions('Lactose Intolerant', this)">Lactose Intolerant</button>
+    </div>
+    <div class="result" id="result"></div>
+</div>
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="printOptions()" style="padding: 15px 30px; background-color: #ff6600; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em;">Submit</button>
+</div>
+</body>
+</html>
