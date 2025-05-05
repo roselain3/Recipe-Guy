@@ -19,7 +19,7 @@ window.Genre = function(option, button) {
 
 window.Allergy = function() {
     const allergyInput = document.getElementById('Allergy').value;
-    array.push(allergyInput);
+    array.push("Allergys:" + allergyInput);
 };
 
 window.Restrictions = function(option, button) {
