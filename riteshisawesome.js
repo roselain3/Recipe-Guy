@@ -1,40 +1,47 @@
-array = [];
+import { callGeminiApi } from "./ai.js";
+let array = [];
 
-function BLD(option, button) {
+// Make functions globally accessible for HTML onclick attributes
+window.BLD = function(option, button) {
     array.push(option);
     darkenButton(button);
-}
+};
 
-function SSS(option, button) {
+window.SSS = function(option, button) {
     array.push(option);
     darkenButton(button);
-}
+};
 
-function Genre(option, button) {
+window.Genre = function(option, button) {
     array.push(option);
     darkenButton(button);
-}
+};
 
-function Allergy() {
+window.Allergy = function() {
     const allergyInput = document.getElementById('Allergy').value;
     array.push(allergyInput);
-}
+};
 
-function Restrictions(option, button) {
+window.Restrictions = function(option, button) {
     array.push(option);
     darkenButton(button);
-}
+};
 
 function darkenButton(button) {
     button.style.backgroundColor = '#e65c00';
 }
 
-function printOptions() {
+function submitToGemini() {
+    console.log("Submitting to Gemini API with user input:", array);
+    callGeminiApi(array);
+}
+
+window.printOptions = function() {
     console.log(array);
     hideEverything();
-    const sub_btn = document.getElementById("butoon").style.display = 'none';
-
-}
+    document.getElementById("button").style.display = 'none';
+    submitToGemini(); // Trigger API call
+};
 
 function hideEverything(){
    const elements = document.getElementsByClassName('quiz-container');

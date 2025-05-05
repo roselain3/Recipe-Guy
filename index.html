@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="riteshisawesome.js"></script>
-    <title>Receipe Guy</title>
+    <script type="module" src="riteshisawesome.js" defer></script>
+    <script type="module" src="ai.js" defer></script>
+    <script type="module" src="elements.js" defer></script>
+    
+     <title>Recipe Guy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,7 +59,7 @@
 </head>
 <body>
     <header>
-        <h1>Receipe Guy</h1>
+        <h1>Recipe Guy</h1>
     </header>
     <div class="quiz-container">
         <div class="question">Breakfast, Lunch, or Dinner?</div>
@@ -107,7 +110,8 @@
     <div class="result" id="result"></div>
 </div>
 <div style="text-align: center; margin-top: 20px;">
-    <button onclick="printOptions()" style="padding: 15px 30px; background-color: #ff6600; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em;">Submit</button>
+    <button id="button" onclick="printOptions()" style="padding: 15px 30px; background-color: #dd651b; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em;">Submit</button>
+
 </div>
 </body>
 </html>
