@@ -1,5 +1,6 @@
 // ai.js
 
+
 function parseRecipeResponse(recipeText) {
   // Create a recipe display container
   const recipeContainer = document.createElement('div');
